@@ -64,5 +64,5 @@ def handle_message(message):
 # === Запуск сервера ===
 if __name__ == "__main__":
     bot.remove_webhook()
-    bot.set_webhook(url=f"https://YOUR-RENDER-URL.onrender.com/{TELEGRAM_TOKEN}")
+    bot.set_webhook(url=f"https://ichuly-gpt.onrender.com/{TELEGRAM_TOKEN}")
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))

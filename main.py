@@ -25,7 +25,8 @@ def webhook():
 # === Ответ от OpenAI ===
 def ask_gpt(message):
     try:
-        response = openai.ChatCompletion.create(
+        client = openai.OpenAI(api_key=OPENAI_API_KEY)
+        response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": message}]
         )
